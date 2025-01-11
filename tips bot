@@ -24,4 +24,4 @@ async def tips_list(ctx, content = tips[0], content2 = tips[1]):
         await ctx.send(content2)
 
 
-bot.run("MTMxOTk2MTU3MzM2MzY4MzMyOA.GIwQ0W.PvRMGxDxGVNPMU_n5TVDjCf-vj25XtG-dtsbaU")
+bot.run("place holder")
