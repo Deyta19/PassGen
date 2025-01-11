@@ -1,0 +1,27 @@
+import discord
+from discord.ext import commands
+import random
+from main import gen_pass
+import os
+import requests
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+@bot.event
+async def on_ready():
+    print(f'We have logged in as {bot.user}')
+
+tips= ["Pengurangan Sampah di Sumbernya" ,
+"Langkah pertama yang bisa diambil adalah mengurangi jumlah sampah yang dihasilkan. Hal ini dapat dilakukan dengan menerapkan prinsip 5R: Reduce (kurangi), Reuse (gunakan kembali), Recycle (daur ulang), Recover (ambil kembali), dan Replace (ganti dengan yang lebih baik)."]
+
+@bot.command()
+async def tips_list(ctx, content = tips[0], content2 = tips[1]):
+    for i in range(1):
+        await ctx.send(content)
+        await ctx.send(content2)
+
+
+bot.run("MTMxOTk2MTU3MzM2MzY4MzMyOA.GIwQ0W.PvRMGxDxGVNPMU_n5TVDjCf-vj25XtG-dtsbaU")
